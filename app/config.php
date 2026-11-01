@@ -9,7 +9,7 @@ return [
         'charset'  => 'utf8mb4',
     ],
     'app' => [
-        'base_url'   => 'https://seudominio.com',   // sem barra final
+        'base_url'   => 'https://',   // sem barra final
         'timezone'   => 'America/Sao_Paulo',
         'upload_dir' => __DIR__ . '/../public/uploads',
         'upload_url' => '/uploads',                 // caminho web
