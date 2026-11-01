@@ -23,6 +23,8 @@ $admin = $stmt->fetch();
 
 if (!$admin) {
     echo "❌ ERRO: O e-mail '$email' não foi encontrado na tabela admins!";
+    db()->query("UPDATE admins SET senha_hash = '" . password_hash('Admin123', PASSWORD_DEFAULT) . "' WHERE email = 'dono1@loja.local'");
+    echo "Senha resetada com sucesso pelo PHP!<br><br>";
 } else {
     echo "✅ E-mail encontrado no banco.<br>";
     echo "Hash salvo no banco: <code>" . $admin['senha_hash'] . "</code><br>";

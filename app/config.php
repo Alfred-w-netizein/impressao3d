@@ -1,34 +1,33 @@
 <?php
-// app/config.php  (copie de config.example.php e ajuste)
 return [
     'db' => [
         'host'     => 'localhost',
         'name'     => 'impressao3d',
-        'user'     => 'root',
-        'pass'     => '',
+        'user'     => 'root',       // Usuário padrão no Fedora
+        'pass'     => '',           // Deixe vazio se não tem senha no MySQL
         'charset'  => 'utf8mb4',
     ],
     'app' => [
-        'base_url'   => 'https://',   // sem barra final
+        'base_url'   => 'http://localhost/impressao3d/public',
         'timezone'   => 'America/Sao_Paulo',
         'upload_dir' => __DIR__ . '/../public/uploads',
-        'upload_url' => '/uploads',                 // caminho web
+        'upload_url' => '/impressao3d/public/uploads', // Isso vai arrumar o CSS!
     ],
     'admins' => [
         'dono1' => [
-            'nome'   => 'DONO_1',
-            'whats'  => '5511999999991',  // DDI+DDD+número, só dígitos
+            'nome'   => 'Lucas Antunes',
+            'whats'  => '5511999999991',
         ],
         'dono2' => [
-            'nome'   => 'DONO_2',
-            'whats'  => '5511999999992',
+            'nome'   => 'Alfred Giulian',
+            'whats'  => '5538998358004',
         ],
     ],
     'upload' => [
-        'max_image_bytes' => 5 * 1024 * 1024,   // 5 MB
-        'max_video_bytes' => 40 * 1024 * 1024,  // 40 MB
+        'max_image_bytes' => 5 * 1024 * 1024,
+        'max_video_bytes' => 40 * 1024 * 1024,
         'image_exts'      => ['jpg', 'jpeg', 'png', 'webp'],
         'video_exts'      => ['mp4', 'webm', 'mov'],
-        'doc_exts'        => ['jpg', 'jpeg', 'png', 'webp', 'pdf'], // comprovante
+        'doc_exts'        => ['jpg', 'jpeg', 'png', 'webp', 'pdf'],
     ],
 ];
